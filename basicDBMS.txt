@@ -1,0 +1,116 @@
+__________________________________________________________________SECTION 1____________________________________________________________________________
+
+1. Write an SQL statement to create an employee table with following details:(empno,empname,doj,manager,salary,commission,deptno)
+
+SQL>create table emp(empno number(4),empname varchar2(10),doj date,manager number(4),salary number(7,2),commission number(5,2),deptno number(2));
+
+2. Write an SQL statement to create a department with following details;(deptno,deptname,location)
+
+SQL>create table dept(deptno number(2),deptname varchar2(10),location varchar2(10));
+
+3. Write an SQL statement to insert records into employee table.
+
+SQL>inset into emp values(1,'Thomas',20-mar-2023,5,50000.00,5000.00,1);
+SQL>inset into emp values(2,'Sandra',15-may-2023,7,25000.00,2500.00,1);
+SQL>inset into emp values(3,'Devajith',30-sep-2023,5,22000.00,2000.00,2);
+SQL>inset into emp values(4,'Kiran',20-dec-2023,2,30000.00,4000.00,3);
+SQL>inset into emp values(5,'Haritha',21-jan-2023,2,12000.00,1500.00,2);
+
+4. Insert two rows into employee table for all columns except manager and commission.
+
+SQL>inset into emp values(6,'Shyam',13-oct-2023,NULL,52000.00,NULL,2);
+SQL>inset into emp values(7,'Shiva',1-nov-2023,NULL,62000.00,NULL,2);
+
+5. Write an SQL statement to insert values into the department table dynamically at runtime.
+
+SQL>inset into dept values(&deptno,'&deptname','&location');
+
+6. Write an SQL statement to copy all the values from already existing employee table to new table.
+
+SQL>SELECT * INTO empnew FROM emp;
+SQL>INSERT INTO empnew SELECT * FROM emp;
+
+7. Write an SQL statement to insert two records into the employee table by giving null values for doj and deptnumber column.
+
+SQL>inset into emp values(8,'Swathi',NULL,5,52000.00,5000.00,NULL);
+SQL>inset into emp values(9,'Shyala',NULL,1,62000.00,6500.00,NULL);
+
+8. Write an SQL statement to insert some records with doj varying 1st jan 2010 to 31st dec 2010
+
+SQL>inset into emp values(10,'Sooraj',30-jul-2010,5,22000.00,2000.00,2);
+SQL>inset into emp values(11,'Ananthujp',20-dec-2010,2,30000.00,4000.00,3);
+SQL>inset into emp values(12,'Ajinraj',13-jan-2010,2,12000.00,1500.00,2);
+
+9. Write an SQL statement to insert 5 records with salary and commission column Varying from 1500 to 15000 and 150 to 3000 respectively
+
+SQL>inset into emp values(13,'Amal',30-mar-2010,5,1500.00,150.00,2);
+SQL>inset into emp values(14,'Neeraj',20-jun-2010,2,5000.00,400.00,3);
+SQL>inset into emp values(15,'Hari',13-feb-2010,2,10000.00,1000.00,2);
+
+10. Write an SQL statement to alter the employee table by adding a column 'sex with datatype char(1).
+
+SQL>alter table emp add sex char(1);
+
+__________________________________________________________________SECTION 2____________________________________________________________________________
+
+
+
+1. Write an SQL statement to display all the records from an employee table
+
+SQL>select * from emp;
+
+2. Write an SQL statement to display all the records from department table
+
+SQL>select deptno from emp;
+
+3. Write an SQL statement to display empno, empname, salary,deptno from employee table
+
+SQL>select empno,empname,salary,deptno from emp;
+
+4. Write an SQL statement to display deptno, deptname from department table.
+
+SQL>select deptno,deptname from dept;
+
+5. Write an SQL statement display the empname who are getting salary more than 5000
+
+SQL>select empname from emp where salary>5000;
+
+6. Write an SQL statement to display the employees who are getting salary=0
+
+SQL>select * from emp where salary=0;
+
+7. Write an SQL statement to display the employee who are getting null commission
+
+SQL>select * from emp where commission=NULL;
+
+8. Write an SQL statement to display employee whose name starts with 's'
+
+SQL>select * from emp where empname like 's%';
+
+9. Write an SQL statement to display employee details who are getting salary between 5000 & 15000
+
+SQL>select * from emp where salary between 5000 and 15000;
+
+10. Write an SQL statement to display employee who join organization between 01-jan-2010 and 31-mar-2010.
+
+SQL>select * from emp where dpj between 01-jan-2010 and 31-mar-2010;
+
+11. Write an SQL statement to display employees who are getting commission less than 1000 only.
+
+SQL>select * from emp where commission<1000;
+
+12. Write an SQL statement to display the employee working in department number 12 & 30.
+
+SQL>SELECT * FROM emp WHERE deptno IN ('12', '30');
+
+13. Write an SQL statement to display employees working in all department except deptno 20 and 30
+
+SQL>SELECT * FROM emp except select * from emp WHERE deptno IN ('20', '30');
+
+14. Write an SQL statement to display employees who are getting salaries not equal to 1000
+
+SQL>select * from emp where salary<>1000;
+
+15. Write an SQL statement to display the employee details who are getting salary more than 1000(1000 inclusive).
+
+SQL>select * from emp where salary>1000;
