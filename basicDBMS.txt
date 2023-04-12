@@ -131,74 +131,74 @@ SQL>SELECT * FROM emp WHERE doj< '01-jan-2000' AND salary < 5000;
 
 4. Write an SQL statement to display the employee whose names sounds like 'zam'
 
-
+SQL>SELECT * FROM emp WHERE soundex(emp_name=soundex('zam'));
 
 5. Write an SQL statement to sort the employee details in an alphabetical order name wise
 
-
+SQL>
 
 6. Write an SQL statement to sort the employee name department wise and each department alphabetical wise
 
-
+SQL>
 
 7. Write an SQL statement to give the employee details in descending order of employee names.
 
-
+SQL>
 
 8. Write an SQL statement to give the employee details in ascending order of department number wise and in each department descending order of salary wise
 
-
+SQL>
 
 9. Write an SQL statement to give the employee details and arrange them inorder based on position.
 
-
+SQL>
 
 10. Write an SQL statement to display empno, name, salary and deptno and display the records in the ascending order based on position.
 
-
+SQL>
 
 
 __________________________________________________________________SECTION 4____________________________________________________________________________
 
 1. Write an SQL statement to display empno, empname, salary and deptnumber with appropriate headings.
 
-
+SQL>
 
 2. Write an SQL statement to display empname, salary and commission without any duplicates
 
-
+SQL>
 
 3. Write an SQL statement to display empno, empname and total salary, Total salary is calculated by adding salary and commission.
 
-
+SQL>
 
 4. Write an SQL statement to display empno, name, their total salary and total annual salary of all employees.
 
-
+SQL>
 
 5. Write an SQL statement to display the empno, empname and their experience. Experience is calculated based upon the ((todays date-doj/12).
 
-
+SQL>
 
 6. Write an SQL statement to display empno, empname, salary, 10% of salary, 50% of salary, 30% of commission, 110% of commission and commission of all employees.
 
-
+SQL>
 
 7. Write an SQL statement to display the empno, empname, total salary, 10% of total salary, 50% of total salary of all the employees.
 
-
+SQL>
 
 8. Write an SQL statement to display the employee details who is getting the highest salary.
 
-
+SQL>
 
 9. Write an SQL statement to display the employee details with lowest salary
 
-
+SQL>
 
 10. Write an SQL statement to display empno and empname in 1st column and total salary in another column.
 
-
+SQL>
 
 
 
@@ -208,40 +208,40 @@ __________________________________________________________________SECTION 5_____
 
 1. Write an SQL plus statement to create a new employee table with following details Empno number(5) primary key ename doj varchar2(15) default 'Not Null' date bp desg number default 5000 varchar2(15) default 'Not Entered'.
 
-
+SQL>
 
 2. Display the experience of each employee in the descending order of experience (in years)
 
-
+SQL>
 
 3. Display empno, empname, basic pay, da, hra and netsalary of all employees with suitable heading as DA. HRA....etc.DA=7.5% of basic, HRA=9% of basic,netsal=basic+HRA+ DA.
 
-
+SQL>
 
 4. Insert some values of empno, doj, empname.
 
-
+SQL>
 
 5. Display the total basic salary given to employees to each designation which is greater than 10000.
 
-
+SQL>
 
 6. Display the empno, name and basic of all employees for either manager or clerk and basic salary in the range of 6000 and 11000
 
-
+SQL>
 
 7. Display the empno, empname, designation and salary of employee with largest salary
 
-
+SQL>
 
 8. Alter the table employee by dropping the primary key
 
-
+SQL>
 
 9. Alter the table employee by adding a new field ss as primary key.
 
-
+SQL>
 
 10. Create a table emp_sal with fields empno ,empname, bp, da using new employee table.
 
-
+SQL>
